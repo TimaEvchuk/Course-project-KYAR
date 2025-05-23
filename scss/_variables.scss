@@ -1,0 +1,167 @@
+$pink: #F03957;
+$pink-advantage: #D4636B;
+$grey-background: rgb(82, 82, 82);
+$grey-text: #817979;
+$our-advantage-background: #f7f5f5;
+$grey-advantage: #C4C4C4;
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/AnyConv.com__Inter-Regular.woff2"),
+	url("../fonts/Inter-Regular.woff"),
+	url("../fonts/AnyConv.com__Inter-Regular.svg");
+}
+@font-face {
+	font-family: "Montserrat";
+	src: url("../fonts/AnyConv.com__Montserrat-Regular.woff2"),
+	url("../fonts/Montserrat-Regular.woff"),
+	url("../fonts/AnyConv.com__Montserrat-Regular.svg");
+}
+%flex-container {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	padding: 0 20px;
+	align-items: center;
+}
+%flex-container2 {
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	padding: 0 20px;
+	flex-direction: column;
+}
+%flex-box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+%scrollbar {
+	&::-webkit-scrollbar {
+		width: 7px;
+		background-color: #D9D9D9;
+	}
+	&::-webkit-scrollbar-thumb {
+		background-color: $pink;
+		border-radius: 5px;
+	}
+}
+@mixin text-basic($font-size, $font-weight) {
+	line-height: 175%;
+	letter-spacing: -1px;
+	font-size: $font-size;
+	font-weight: $font-weight;
+}
+@mixin btn-hover($color, $bg-color) {
+	color: $color;
+	background-color: $bg-color;
+	transform: scale(1.05);
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: "Inter";
+	font-weight: 400;
+	font-size: 18px;
+	overflow-x: hidden;
+	@extend %scrollbar;
+}
+.section__info {
+	@extend %flex-box;
+	padding: 0;
+	max-width: 1160px;
+	margin: 0 auto 80px;
+	gap: 40px;
+}
+.section__title {
+		@include text-basic(45px, 700);
+		color: #fff;
+		text-transform: uppercase;
+		font-family: "Montserrat";
+		span {
+			color: $pink;
+			font-weight: 700;
+		}
+}
+.section__text {
+	@include text-basic(18px, 600);
+	letter-spacing: initial;
+	color: #fff;
+	max-width: 496px;
+}
+.button {
+	border-radius: 10px;
+	font-weight: 600;
+	text-align: center;
+}
+.button-red {
+	background-color: $pink;
+	color: #fff;
+	transition: 0.2s all ease;
+	border: 3px solid $pink;
+	&:hover {
+		@include btn-hover($pink, #fff);
+	}
+}
+
+.button-default {
+	border: 3px solid #000;
+	transition: 0.2s all ease;
+	color: #000;
+	&:hover {
+		@include btn-hover(#fff, #000);
+	}
+}
+
+.krepair__nav {
+	margin: 0 0 100px;
+	align-self: start;
+	@include text-basic(16px, 400);
+	a, span {
+		color: #A5A4A4;
+	}
+	span:hover {
+		cursor: pointer;
+	}
+	a:hover {
+		font-weight: 600;
+	}
+}
+@media(max-width: 1200px) {
+	.section__info {
+		margin: 0 auto 60px;
+	}
+	.section__title {
+		font-size: 35px;
+		line-height: 150%;
+	}
+	.section__text {
+		font-size: 16px;
+	}
+	.button {
+		font-size: 16px;
+	}
+	.krepair__nav {
+		margin: 0 0 80px;
+	}
+}
+@media(max-width:808px) {
+	.section__info {
+		flex-direction: column;
+		gap: 25px;
+		margin: 0 auto 35px;
+	}
+	.section__title {
+		align-self: start;
+		font-size: 30px;
+	}
+	.krepair__nav {
+		font-size: 10px;
+		margin: 0 0 60px;
+	}
+}
+@media(max-width:560px) {
+	.button-red, .button-default {
+		width: 100%;
+	}
+}

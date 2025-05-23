@@ -1,0 +1,112 @@
+.our-employees {
+	@extend %flex-container;
+	flex-direction: column;
+	margin: 0 auto 120px;
+	align-items: start;
+}
+.our-employees__title {
+	font-family: "Montserrat", sans-serif;
+	@include text-basic(45px, 700);
+	text-transform: uppercase;
+	margin: 0 0 80px;
+	span {
+		color: $pink;
+	}
+}
+.our-employees__box {
+	@extend %flex-box;
+	gap: 30px;
+	flex-wrap: wrap;
+	align-items: start;
+	width: 100%;
+}
+.our-employees__card {
+	flex-basis: calc(33.33% - 20px);
+	background-color: #F7F5F5;
+	border-radius: 20px;
+}
+.our-employees__card-img {
+	height: 452px;
+	img {
+		border-radius: 20px;
+	}
+}
+.employee1-img {
+	object-position: 0% 50%;
+}
+.employee2-img {
+	object-position: 25% 50%;
+}
+.employee3-img {
+	object-position: 100% 50%;
+}
+.our-employees__card-title {
+	@include text-basic(20px, 500);
+	margin: 30px 30px 0;
+}
+.our-employees__card_subtitle {
+	@include text-basic(16px, 400);
+	margin: 0 30px;
+}
+.our-employees__card-info {
+	@include text-basic(16px, 400);
+	color: #777272;
+	margin: 15px 30px 30px;
+}
+@media(max-width:1200px) {
+	.our-employees {
+		margin: 0 auto 100px;
+	}
+	.our-employees__title {
+		margin: 0 0 60px;
+		font-size: 35px;
+	}
+	.our-employees__box {
+		flex-direction: column;
+		align-self: center;
+		text-align: center;
+		gap: 60px;
+	}
+	.our-employees__card {
+		flex-basis: initial;
+		width: 100%;
+	}
+	.our-employees__card-img {
+		width: 100%;
+	}
+	.employee1-img {
+		object-position: 0% 50%;
+	}
+	.employee2-img {
+		object-position: 30% 50%;
+	}
+	.our-employees__card-title {
+		margin: 40px 30px 0;
+	}
+	.our-employees__card-info {
+		max-width: 300px;
+		margin: 20px auto 47px;
+		font-size: 14px;
+	}
+}
+@media(max-width: 808px) {
+	.our-employees {
+		margin: 0 auto 60px;
+	}
+	.our-employees__title {
+		margin: 0 0 35px;
+		font-size: 30px;
+	}
+	.our-employees__box {
+		gap: 30px;
+	}
+	.our-employees__card-info {
+		margin: 20px 15px 30px;
+		max-width: 100%;
+	}
+}
+@media(max-width: 400px) {
+	.employee3-img {
+		object-position: 90% 50%;
+	}
+}

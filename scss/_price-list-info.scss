@@ -1,0 +1,289 @@
+.price-list {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	align-items: start;
+	padding: 0;
+}
+.krepair__nav_price-list {
+	margin: 60px 20px 100px;
+}
+.price-list__nav-title-box {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+.price-list__title {
+	@include text-basic(50px, 700);
+	text-transform: uppercase;
+	font-family: "Montserrat", sans-serif;
+	margin: 0 20px 60px;
+	span {
+		color: $pink;
+	}
+}
+.price-list__card {
+	width: 100%;
+	overflow: hidden;
+}
+.price-list__upper-part-box, .price-list__inner-part-box {
+	display: grid;
+	grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+	position: relative;
+}
+.price-list__upper-part-box {
+	border-bottom: 1px solid #DFDFDF;
+}
+.price-list__upper-part-box_first {
+	border-top: 1px solid #DFDFDF;
+}
+.price-list__inner-part-box {
+	background-color: #F7F5F5;
+	max-height: 0px;
+	transition: all 0.3s ease-in-out;
+	&.active {
+		border-bottom: 1px solid #DFDFDF;
+	}
+}
+.upper-part {
+	display: flex;
+	justify-content: end;
+	gap: 30px;
+	max-width: 1200px;
+	padding: 60px 20px;
+	grid-column: 2 / 3;
+}
+.upper-part__title-box {
+	margin-right: auto;
+}
+.upper-part__title {
+	max-width: max-content;
+	@include text-basic(40px, 600);
+}
+.upper-part__subtitle {
+	@include text-basic(20px, 600);
+}
+.upper-part__points {
+	max-width: 341px;
+	width: 100%;
+	transform: translateX(23px);
+	padding: 0 23px 0 0;
+}
+.upper-part__point {
+	margin: 0 0 20px;
+	&:last-child {
+		margin: 0;
+	}
+}
+.upper-part__arrow-text {
+	display: inline-block;
+	max-width: 126px;
+	width: 100%;
+	color: $grey-text;
+	height: min-content;
+	align-self: center;
+	position: relative;
+	padding: 0 26px 0 0;
+	margin: 0 48px 0 0;
+	text-align: right;
+	&::after {
+		content: "";
+		background-image: url("../images/arrow-icon2.svg");
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 6px;
+		right: 0;
+		width: 21px;
+		height: 12px;
+		transition: all 0.2s ease;
+	}
+}
+.upper-part__arrow-text.activeBtn::after {
+	transform: rotate(180deg);
+}
+.inner-part {
+	display: grid;
+	max-width: 1200px;
+	padding: 40px 20px;
+	grid-template-columns: 1fr repeat(3, 161px);
+	row-gap: 30px;
+	column-gap: 30px;
+	align-items: center;
+	position: relative;
+	grid-column: 2 / 3;
+}
+.inner-part__headline-category {
+	max-width: 165px;
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+}
+.inner-part__question-icon {
+	grid-column: 1 / 2;
+	grid-row: 1 / 2;
+	height: 23px;
+	width: 23px;
+	margin: 0 0 0 177px;
+}
+.inner-part__question-text {
+	@include text-basic(15px, 400);
+	z-index: 5;
+	line-height: 150%;
+	position: absolute;
+	top: -135px;
+	left: 20px;
+	max-width: 417px;
+	padding: 30px 35px;
+	border-radius: 15px;
+	box-shadow: 0px 0px 50px 34px rgba(211, 211, 211, 0.25);
+	background-color: #fff;
+	opacity: 0;
+	transition: all 0.1s ease-in;
+	&.active {
+		opacity: 1;
+	}
+}
+.inner-part__headline-category, .inner-part__headline {
+	@include text-basic(16px, 400);
+	color: #9A9696;
+}
+.inner-part__headline {
+	max-width: min-content;
+}
+.inner-part__category {
+	max-width: 395px;
+	width: 100%;
+}
+.inner-part__digit {
+	@include text-basic(18px, 600);
+}
+.inner-part__category-title {
+	@include text-basic(20px, 600);
+	margin: 0 0 5px;
+}
+.inner-part__category-subtitle {
+	margin: 0 0 5px;
+	display: inline-block;
+}
+
+@media(max-width: 1200px) {
+	.krepair__nav_price-list {
+		margin: 70px 20px 80px;
+	}
+	.price-list__title {
+		font-size: 35px;
+		margin: 0 20px 80px;
+	}
+	.upper-part {
+		flex-wrap: wrap;
+		column-gap: 53px;
+		padding: 33px 20px;
+		justify-content: start;
+	}
+	.upper-part__title {
+		font-size: 30px;
+		max-width: 100%;
+	}
+	.upper-part__subtitle {
+		font-size: 18px;
+	}
+	.upper-part__points {
+		transform: translateX(0px);
+		padding: 0;
+	}
+	.upper-part__point {
+		font-size: 16px;
+	}
+	.upper-part__arrow-text {
+		font-size: 16px;
+		margin: 0;
+		max-width: 100%;
+		text-align: start;
+		z-index: 6;
+		transition: z-index 0.2s ease;
+		&::after {
+			top: 7.5px;
+			left: 93px;
+			height: 7px;
+			width: 14px;
+			background-size: 100% 100%;
+		}
+	}
+	.inner-part {
+		grid-template-columns: 1fr repeat(3, 101px);
+	}
+	.inner-part__question-text {
+		font-size: 12px;
+		max-width: 310px;
+	}
+	.inner-part__category-title {
+		font-size: 18px;
+	}
+	.inner-part__category-subtitle {
+		font-size: 16px;
+	}
+}
+@media(max-width: 808px) {
+	.krepair__nav_price-list {
+		margin: 64px 20px 60px;
+	}
+	.price-list__title {
+		font-size: 30px;
+		margin: 0 20px 40px;
+	}
+	.upper-part {
+		justify-content: start;
+		padding: 40px 20px;
+	}
+	.upper-part__title {
+		font-size: 20px;
+		margin: 0 0 12px;
+		max-width: initial;
+	}
+	.upper-part__subtitle {
+		font-size: 16px;
+	}
+	.upper-part__points {
+		max-width: 100%;
+		padding: 0 0 0 20px;
+	}
+	.upper-part__point {
+		margin: 0 0 25px;
+	}
+	.upper-part__arrow-text {
+		max-width: max-content;
+		
+	}
+	.inner-part {
+		grid-template-columns: repeat(3, 80px) 1fr;
+		column-gap: 15px;
+		row-gap: 0px;
+	}
+	.inner-part__question-text {
+		padding: 25px;
+		font-size: 10px;
+		top: -105px;
+		letter-spacing: normal;
+	}
+	.inner-part__headline-category {
+		font-size: 12px;
+		grid-column: 1 / 5;
+		margin: 0 0 20px;
+	}
+	.inner-part__question-icon {
+		margin: -20px 0 0 127px;
+		z-index: 10;
+	}
+	.inner-part__headline {
+		font-size: 12px;
+	}
+	.inner-part__category {
+		grid-column: 1 / 5;
+		margin: 35px 0 25px;
+	}
+	.inner-part__category-subtitle {
+		margin: 0;
+	}
+	.inner-part__digit {
+		font-size: 16px;
+	}
+}

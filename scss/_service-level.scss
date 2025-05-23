@@ -1,0 +1,123 @@
+.service-level {
+	@extend %flex-container;
+	margin: 0 auto;
+	flex-direction: column;
+	align-items: start;
+	padding: 120px 20px 0;
+}
+.service-level__title {
+	@include text-basic(45px, 700);
+	font-family: "Montserrat", sans-serif;
+	text-transform: uppercase;
+	max-width: 720px;
+	margin: 0 0 80px;
+	span {
+		color: $pink;
+	}
+}
+.service-level__flex-box {
+	@extend %flex-box;
+	background-color: #F7F5F5;
+	border-radius: 20px;
+	position: relative;
+	justify-content: end;
+	margin: 0 0 50px;
+	&:last-child {
+		margin: 0 0 120px;
+	}
+}
+.service-level__grey-block {
+	@extend %flex-box;
+	@include text-basic(20px, 600);
+	background-color: #C4C4C4;
+	border-radius: 20px;
+	padding: 50px 70px 55px 28px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 51%;
+	bottom: 0;
+}
+.service-level__grey-block-info {
+	align-self: self-start;
+}
+.service-level__arrow-icon {
+	align-self: self-end;
+	height: 40px;
+	transform: translateY(8px);
+	transition: all 0.2s ease;
+	svg {
+		width: 40px;
+	}
+	&:hover {
+		transform: translateY(8px) scale(1.1);
+	}
+}
+.service-level__default-block {
+	@include text-basic(18px, 400);
+	flex-basis: 51%;
+	padding: 50px 50px 50px 60px;
+}
+@media(max-width: 1200px) {
+	.service-level {
+		padding: 100px 20px 0;
+	}
+	.service-level__title {
+		font-size: 35px;
+		margin: 0 0 60px;
+		max-width: 580px;
+	}
+	.service-level__flex-box {
+		margin: 0 0 38px;
+		&:last-child {
+			margin: 0 0 100px;
+		}
+	}
+	.service-level__grey-block {
+		font-size: 18px;
+		padding: 40px 50px 45px 28px;
+	}
+	.service-level__default-block {
+		font-size: 16px;
+		padding: 40px 20px 40px 45px;
+	}
+}
+@media(max-width: 808px) {
+	.service-level {
+		padding: 60px 20px 0;
+	}
+	.service-level__title {
+		font-size: 30px;
+		margin: 0 0 35px;
+	}
+	.service-level__flex-box {
+		flex-direction: column;
+		margin: 0 0 35px;
+		&:last-child {
+			margin: 0 0 60px;
+		}
+	}
+	.service-level__grey-block {
+		position: initial;
+		padding: 40px 25px;
+		flex-direction: column;
+		width: 100%;
+	}
+	.service-level__grey-block-info {
+		font-size: 16px;
+	}
+	.service-level__arrow-icon {
+		height: 30px;
+		transform: initial;
+		&:hover {
+			transform: translateY(0) scale(1.2);
+		}
+		img {
+			width: 30px;
+			
+		}
+	}
+	.service-level__default-block {
+		padding: 30px 25px 40px;
+	}
+}

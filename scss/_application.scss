@@ -1,0 +1,192 @@
+.application {
+	background-color: $grey-background;
+	padding: 115px 20px;
+}
+.section__title_application {
+	max-width: 475px;
+}
+.section__text_application {
+	max-width: 345px;
+}
+.form {
+	@extend %flex-box;
+	flex-wrap: wrap;
+	column-gap: 35px;
+	margin: 60px auto 0;
+	padding: 80px 100px;
+	max-width: 1160px;
+	background-color: #fff;
+	border-radius: 20px;
+	column-gap: 30px;
+	row-gap: 40px;
+}
+.form__input-box {
+	flex-basis: calc(50% - 15px);
+	@extend %flex-box;
+	gap: 20px;
+	flex-direction: column;
+	input {
+		width: 100%;
+		padding: 13.5px 25px;
+	}
+}
+.form__textarea-box {
+	flex-basis: calc(50% - 15px);
+	padding: 15px 25px;
+	height: 211px;
+	position: relative;
+	&:focus-within {
+		background-color: darken(#fff, 5%);
+	}
+}
+.form__textarea-box, .form__input-box input {
+	@include text-basic(16px, 400);
+		color: $grey-text;
+		border: 1px solid #D9D9D9;
+		border-radius: 10px;
+		transition: all 0.2s ease;
+		&:hover, &:focus {
+			background-color: darken(#fff, 5%);
+		}
+}
+.form__textarea {
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	right: 73px;
+	bottom: 68px;
+	resize: none;
+	@extend %scrollbar;
+	&:focus {
+		outline: none;
+	}
+}
+.form__textarea-input {
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	height: 33px;
+	width: 33px;
+	z-index: 1;
+	opacity: 0;
+	&:hover ~ .clip-img {
+		background-color: darken(#D9D9D9, 15%);
+		transform: scale(1.05);
+	}
+}
+.clip-img {
+	position: absolute;
+	bottom: 25px;
+	right: 25px;
+	height: 33px;
+	width: 33px;
+	border-radius: 3px;
+	background-color: #D9D9D9;
+	padding: 0 10px;
+	transition: all 0.2s ease;
+	img {
+		object-fit: contain;
+	}
+}
+
+.custom-file-upload {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+	right: 73px;
+	line-height: 120%;
+	height: max-content;
+	max-height: 33px;
+	overflow-y: auto;
+	display: flex;
+	align-items: start;
+	@extend %scrollbar;
+	&:hover ~ .clip-img {
+		transform: initial;
+		background-color: #D9D9D9;
+	}
+}
+.form__button {
+	padding: 15px 46.15px;
+	margin: 0 auto;
+	@include text-basic(18px, 600);
+}
+@media(max-width:1200px) {
+	.application {
+		padding: 90px 20px;
+	}
+	.section__title_application {
+		max-width: 350px;
+	}
+	.form {
+		column-gap: 20px;
+		padding: 60px 48px;
+	}
+	.form__input-box, .form__textarea-box {
+		flex-basis: calc(50% - 10px);
+	}
+	.form__input-box {
+		gap: 15px;
+		input {
+			padding: 14px 15px;
+			font-size: 12px;
+		}
+	}
+	.form__textarea-box {
+		font-size: 12px;
+		padding: 15px;
+		height: 183px;
+	}
+	.form__textarea {
+		top: 15px;
+		left: 15px;
+		right: 58px;
+		bottom: 58px;
+	}
+	.form__textarea-input {
+		bottom: 15px;
+		right: 15px;
+	}
+	.clip-img {
+		bottom: 15px;
+		right: 15px;
+	}
+	.custom-file-upload {
+		bottom: 15px;
+		left: 15px;
+		right: 58px;
+	}
+	.form__button {
+		padding: 10px 18px;
+	}
+}
+@media(max-width:808px) {
+	.application {
+		padding: 60px 20px 40px;
+	}
+	.section__text_application {
+		max-width: 100%;
+		align-self: start;
+	}
+	.form {
+		row-gap: initial;
+		flex-direction: column;
+		padding: 35px 25px;
+		margin: 0;
+	}
+	.form__input-box, .form__textarea-box {
+		flex-basis: calc(50% - 10px);
+	}
+	.form__input-box {
+		flex-basis: initial;
+		width: 100%;
+		gap: 15px;
+		margin: 0 0 15px;
+	}
+	.form__textarea-box {
+		flex-basis: initial;
+		width: 100%;
+		height: 198px;
+		margin: 0 0 30px;
+	}
+}

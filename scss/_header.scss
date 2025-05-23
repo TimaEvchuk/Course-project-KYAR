@@ -1,0 +1,138 @@
+.header {
+	margin: 25px auto 0;
+	@extend %flex-container;
+	
+	a {
+		color: #2E3235;
+		&:hover {
+			font-weight: 600;
+		}
+	}
+}
+.header__logo {
+	height: 65px;
+}
+
+.header__links {
+	@extend %flex-box;
+	gap: 75px;
+	transition: all 0.4s ease;
+	align-items: start !important;
+	z-index: 2;
+}
+.header__links.active {
+	transform: translateX(0%);
+}
+.header__link {
+	a {
+		line-height: 175%;
+	}
+}
+.header__link_active {
+	a {
+		color: $pink;
+	}
+}
+.header__tel {
+	@include text-basic(20px, 700);
+	transition: all 0.4s ease;
+}
+.header__tel.active {
+	transform: translateX(0%);
+}
+.header__burger-menu {
+	display: none;
+	width: 25px;
+	height: 17px;
+	position: relative;
+	z-index: 2;
+	span {
+		height: 3px;
+		width: 100%;
+		display: inline-block;
+		
+		background-color: #000;
+		position: absolute;
+		transition: all 0.2s ease;
+		&:nth-child(1) {
+			top: 0;
+			left: 0;
+		}
+		&:nth-child(2) {
+			top: 7px;
+			left: 0;
+		}
+		&:nth-child(3) {
+			top: 14px;
+			left: 0;
+		}
+	}
+	&.active span:nth-of-type(1)  {
+		transform: translateY(7px) rotate(45deg);
+		height: 2px;
+	}
+	&.active span:nth-of-type(2){
+		transform: scale(0);
+		height: 2px;
+	}
+	&.active span:nth-of-type(3) {
+		transform: translateY(-7px) rotate(-45deg);
+		height: 2px;
+	}
+}
+@media(max-width: 1200px) {
+	.header__logo {
+		height: 35px;
+	}
+	.header__links {
+		gap: 38px;
+	}
+	.header__link {
+		a {
+			font-size: 14px;
+		}
+	}
+	.header__tel {
+		font-size: 18px;
+	}
+}
+@media(max-width: 808px) {
+	.header {
+		a {
+			color: #D9D9D9;
+		}
+	}
+	.header__logo {
+		z-index: 3;
+	}
+	.header__burger-menu {
+		display: block;
+	}
+	.header__links {
+		position: absolute;
+		top: 0px;
+		left: 0;
+		padding: 90px 20px 100px;
+		transform: translateX(100%);
+		flex-direction: column;
+		gap: 20px;
+		width: 100%;
+		background-color: $grey-background;
+	}
+	.header__link_active {
+		a {
+			color: $pink;
+		}
+	}
+	.header__tel {
+		position: absolute;
+		top: 275px;
+		left: 0;
+		right: 0;
+		padding-left: 20px;
+		font-size: 14px;
+		line-height: 25px;
+		transform: translateX(100%);
+		z-index: 2;
+	}
+}
