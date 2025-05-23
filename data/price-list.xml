@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+    <category name="Ремонт плат 1 кт">
+        <description>(на компонентном уровне)</description>
+        <services_list>
+            <service>Ремонт материнской платы</service>
+            <service>Ремонт блока питания</service>
+            <service>Восстановление контактов</service>
+            <service>Устранение короткого замыкания</service>
+            <service>Ремонт модуля WIFI</service>
+            <service>Ремонт модуля Bluetooth</service>
+			<service>Ремонт GSM модуля</service>
+        </services_list>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">10</price>
+                <price category="Полупрофи">30</price>
+                <price category="Профи">69</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">35</price>
+                <price category="Полупрофи">65</price>
+                <price category="Профи">98</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">62</price>
+                <price category="Полупрофи">115</price>
+                <price category="Профи">154</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Ремонт плат 2 кт">
+        <description>(на компонентном уровне)</description>
+        <services_list>
+            <service>Замена контроллера питания</service>
+            <service>Замена WIFI модуля</service>
+            <service>Замена Bluetooth модуля</service>
+            <service>Замена GSM модуля</service>
+            <service>Замена конденсаторов</service>
+            <service>Замена транзисторов</service>
+        </services_list>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">15</price>
+                <price category="Полупрофи">39</price>
+                <price category="Профи">70</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">41</price>
+                <price category="Полупрофи">88</price>
+                <price category="Профи">125</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">69</price>
+                <price category="Полупрофи">149</price>
+                <price category="Профи">184</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Замена плат">
+        <description></description>
+        <services_list>
+            <service>Замена материнской платы</service>
+            <service>Замена блока питания</service>
+            <service>Замена плату управления</service>
+            <service>Замена дополнительных плат</service>
+        </services_list>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">9</price>
+                <price category="Полупрофи">15</price>
+                <price category="Профи">20</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">20</price>
+                <price category="Полупрофи">29</price>
+                <price category="Профи">30</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">32</price>
+                <price category="Полупрофи">39</price>
+                <price category="Профи">45</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Прошивка">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">8</price>
+                <price category="Полупрофи">18</price>
+                <price category="Профи">25</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">20</price>
+                <price category="Полупрофи">40</price>
+                <price category="Профи">69</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">45</price>
+                <price category="Полупрофи">79</price>
+                <price category="Профи">90</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Замена шлейфов / разъемов">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">7</price>
+                <price category="Полупрофи">12</price>
+                <price category="Профи">20</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">20</price>
+                <price category="Полупрофи">35</price>
+                <price category="Профи">40</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">49</price>
+                <price category="Полупрофи">60</price>
+                <price category="Профи">79</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Корпусной ремонт">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">12</price>
+                <price category="Полупрофи">30</price>
+                <price category="Профи">50</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">35</price>
+                <price category="Полупрофи">54</price>
+                <price category="Профи">100</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">56</price>
+                <price category="Полупрофи">95</price>
+                <price category="Профи">150</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Замена корпусных элементов">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">9</price>
+                <price category="Полупрофи">18</price>
+                <price category="Профи">25</price>
+            </level>
+            <level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">18</price>
+                <price category="Полупрофи">32</price>
+                <price category="Профи">40</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">29</price>
+                <price category="Полупрофи">45</price>
+                <price category="Профи">59</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Замена АКБ">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">7</price>
+                <price category="Полупрофи">10</price>
+                <price category="Профи">20</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 2 часов работы мастера">
+                <price category="Любитель">15</price>
+                <price category="Полупрофи">22</price>
+                <price category="Профи">35</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Замена диодных панелей / Матриц">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">10</price>
+                <price category="Полупрофи">20</price>
+                <price category="Профи">28</price>
+            </level>
+						<level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">21</price>
+                <price category="Полупрофи">32</price>
+                <price category="Профи">41</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">30</price>
+                <price category="Полупрофи">40</price>
+                <price category="Профи">59</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Ремонт диодных панелей / Матриц">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">18</price>
+                <price category="Полупрофи">30</price>
+                <price category="Профи">40</price>
+            </level>
+						<level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">26</price>
+                <price category="Полупрофи">45</price>
+                <price category="Профи">57</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">38</price>
+                <price category="Полупрофи">60</price>
+                <price category="Профи">80</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Ремонт моторов">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">19</price>
+                <price category="Полупрофи">33</price>
+                <price category="Профи">49</price>
+            </level>
+						<level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">28</price>
+                <price category="Полупрофи">50</price>
+                <price category="Профи">65</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">40</price>
+                <price category="Полупрофи">75</price>
+                <price category="Профи">94</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Замена моторов">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Простой" description="разборка/ремонт/сборка/проверка, менее 1 часа работы мастера">
+                <price category="Любитель">10</price>
+                <price category="Полупрофи">20</price>
+                <price category="Профи">28</price>
+            </level>
+						<level name="Средний" description="разборка/ремонт/сборка/проверка, менее 3 часов работы мастера">
+                <price category="Любитель">21</price>
+                <price category="Полупрофи">32</price>
+                <price category="Профи">41</price>
+            </level>
+            <level name="Сложный" description="разборка/ремонт/сборка/проверка, более 3 часов работы мастера">
+                <price category="Любитель">30</price>
+                <price category="Полупрофи">40</price>
+                <price category="Профи">59</price>
+            </level>
+        </complexity_levels>
+    </category>
+		<category name="Калибровка">
+        <description></description>
+        <price_categories>
+            <category name="Любитель" range="до 15"/>
+            <category name="Полупрофи" range="15–40"/>
+            <category name="Профи" range="от 40"/>
+        </price_categories>
+        <complexity_levels>
+            <level name="Калибровка" description="">
+                <price category="Любитель">9</price>
+                <price category="Полупрофи">19</price>
+                <price category="Профи">30</price>
+            </level>
+        </complexity_levels>
+    </category>
+</services>
